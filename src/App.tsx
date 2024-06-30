@@ -1,23 +1,28 @@
-// src/App.tsx
-import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import Scooters from './components/Scooters';
-import Map from './components/Map';
-import './App.css';
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Scooters from "./components/Scooters";
+import Map from "./components/Map";
+import "./App.css";
+import { useSelector } from "react-redux";
+import { RootState } from "./redux/Store";
+import LoginPage from "./components/LoginPage";
 
 const App: React.FC = () => {
-  const [currentTab, setCurrentTab] = useState<string>('scooters');
+  const [currentTab, setCurrentTab] = useState<string>("scooters");
+  const { isAuthenticated } = useSelector(
+    (state: RootState) => state.user
+  );
 
   const renderContent = () => {
     switch (currentTab) {
-      case 'scooters':
+      case "scooters":
         return <Scooters />;
-      case 'service':
+      case "service":
         return <div>Сервис</div>;
-      case 'map':
+      case "map":
         return <Map />;
-      case 'info':
+      case "info":
         return <div>Информация</div>;
       default:
         return <Scooters />;
@@ -27,14 +32,16 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <Header />
-      <div className="main">
-        <Sidebar setCurrentTab={setCurrentTab} />
-        <div className="content">
-          {renderContent()}
+      {isAuthenticated ? (
+        <div className="main">
+          <Sidebar setCurrentTab={setCurrentTab} />
+          <div className="content">{renderContent()}</div>
         </div>
-      </div>
+      ) : (
+        <LoginPage />
+      )}
     </div>
   );
-}
+};
 
 export default App;
