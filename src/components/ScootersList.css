@@ -1,0 +1,41 @@
+/* src/components/ScootersList.css */
+.scooters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scooter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scooter-item:hover {
+    background-color: #f1f1f1;
+}
+
+.scooter-model {
+    font-weight: bold;
+}
+
+.scooter-id {
+    color: #555;
+}
+
+.scooter-status {
+    font-weight: bold;
+}
+
+.scooter-status.active {
+    color: green;
+}
+
+.scooter-status.inactive {
+    color: red;
+}

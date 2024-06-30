@@ -1,0 +1,51 @@
+/* src/components/Sidebar.css */
+.sidebar {
+    width: 200px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e9ecef;
+    height: 100vh;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin-bottom: 15px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Выровнять содержимое по началу */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none; /* Убираем обводку */
+    outline: none; /* Убираем обводку при фокусировке */
+    background: none; /* Убираем стандартный фон кнопки */
+    width: 100%; /* Занимает всю ширину контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширину */
+}
+
+.sidebar-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.link-text {
+    flex: 1;
+    text-align: left; /* Выровнять текст по левому краю */
+}

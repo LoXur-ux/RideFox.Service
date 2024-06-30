@@ -1,0 +1,45 @@
+/* src/components/ScooterInfo.css */
+.scooter-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scooter-details {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.scooter-image img {
+    width: 100px;
+    height: auto;
+}
+
+.scooter-stats {
+    margin-left: 20px;
+}
+
+.status {
+    color: green;
+    font-weight: bold;
+}
+
+.status.inactive {
+    color: red;
+}
+
+.scooter-location {
+    width: 35%;
+}
+
+.empty-map {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

@@ -1,0 +1,23 @@
+/* src/components/Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    height: 60px;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+    margin-right: 0px;
+}
+
+.title {
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}

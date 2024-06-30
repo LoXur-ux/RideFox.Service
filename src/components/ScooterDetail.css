@@ -1,0 +1,85 @@
+/* src/components/ScooterDetail.css */
+.scooter-detail {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #007bff;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.scooter-detail-content {
+    display: flex;
+    gap: 20px;
+}
+
+.scooter-info {
+    flex: 1;
+}
+
+.scooter-info h2 {
+    margin: 0;
+    display: inline;
+    margin-right: 10px;
+}
+
+.scooter-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scooter-info p {
+    margin: 5px 0;
+}
+
+.scooter-detail-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+}
+
+.scooter-detail-status.active {
+    background-color: green;
+}
+
+.scooter-detail-status.inactive {
+    background-color: red;
+}
+
+.scooter-image {
+    margin-top: 10px;
+    max-width: 50%;
+    height: auto;
+}
+
+.scooter-stats {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.daily-stats, .all-time-stats {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.daily-stats h3, .all-time-stats h3 {
+    margin-top: 0;
+}
